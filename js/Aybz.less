@@ -1,0 +1,146 @@
+@LinkC:#666;
+@HoverC:#931010;
+@FontSize:14px;
+body {
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+a {
+    color:@LinkC; text-decoration:none;cursor: pointer;
+    &:link,&:visited, &:active{color: @LinkC;}
+    &:hover, &:focus {color:@HoverC; text-decoration:none;outline:none;}
+      &,span,i,em,u,strong,b,p,img,ul,li,div,dd,dt,dl,ol,table,th,td,h1,h2,h3,h4,h5,h6,input,textarea,button,small,select {cursor: pointer;.dz;}
+}
+.dz(@time:0.25s){-webkit-transition: all @time ease-in-out;-moz-transition: all @time ease-in-out;-o-transition: all @time ease-in-out;transition: all @time ease-in-out;}
+
+
+
+.mar-top40 {
+  margin-top: 40px
+}
+.clsul {
+  margin: 10px;  
+  list-style: none;
+  padding-left: 0;
+  -webkit-padding-start: 0px;
+  li {
+    height: 50px;
+    border-bottom: #d2d2d2 1px solid;
+    a {
+      display: block;
+      img {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      h3 {
+        display: inline;
+        font-size: 16px;
+        font-weight: normal;
+        margin-left: 10px;
+      }
+    }
+  }
+
+}
+
+.bzclsul {
+  margin: 10px;
+  padding-top: 30px;
+  list-style: none;
+  padding-left: 0;
+  -webkit-padding-start: 0px;
+  .clsname {
+    height: 55px;
+    background: #666;
+    line-height: 50px;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: -5px;
+    font-size: 16px;
+    padding-left: 15px;
+    color: #fff;
+    font-weight: bold;
+  }
+  li {
+    height: 110px;
+    border-bottom: #d2d2d2 1px solid;
+    background: #fdfeff;
+    a {
+      display: block;
+      img {
+        width: 48px;
+        height: 48px;
+        float: left;
+        margin-top: 20px;
+      }
+      .clsfont {
+        display: inline-block;
+        margin-left: 10px;
+        h3 {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: normal;
+        }
+        p {
+
+        }
+      }
+    }
+  }
+}
+
+.bzcontent {
+  img {
+    max-width: 100%;
+    height: auto;;
+  }
+}
+.txt {
+  width:100%;
+  height:auto;
+  min-height: 800px;
+}
+
+.base {
+  position: relative;
+  .loading {
+    text-align: center;
+    width:300px;
+    height: 300px;
+    top: 30px;
+    left:50%;
+    margin-left: -150px;
+    position: absolute;
+    z-index: 0;
+    p {
+      display: block;
+      text-align: center;
+      margin-top: -80px;
+      color: #aaa;
+    }
+  }
+  #aybzApp {
+    position: relative;
+    z-index: 99;
+  }
+  .loading::after {
+    animation: loading .3s infinite;
+  }
+}
+
+@keyframes loading {
+  0%{
+    content: ''
+  }
+  33%{
+    content: '.'
+  }
+  66%{
+    content: '..'
+  }
+  100%{
+    content: '...'
+  }
+}
